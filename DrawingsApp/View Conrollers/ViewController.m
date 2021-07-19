@@ -25,16 +25,18 @@
 @property (weak, nonatomic) IBOutlet CustomButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *goToDrawings;
 @property (nonatomic) MyManager *sharedManager;
+@property (nonatomic) BOOL *resetState;
 
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
+    self.resetState = false;
     [super viewDidLoad];
     MyManager *sharedManager = [MyManager sharedManager];
     sharedManager.time = 1.0;
-    self.selectedPicture = @1;
+    self.selectedPicture = @2;
     // Do any additional setup after loading the view.
     [self setupView];
     
@@ -58,7 +60,8 @@
     self.animationView.layer.shadowOpacity = 0.25f;
     self.animationView.layer.masksToBounds = NO;
     self.animationView.backgroundColor = UIColor.whiteColor;
-    self.drawButton.enabled = false;
+    self.drawButton.enabled = true;
+    self.shareButton.enabled = false;
 //    UIEdgeInsets shadowInsets     = UIEdgeInsetsMake(0, 0, -1.5f, 0);
 //    UIBezierPath *shadowPath      = [UIBezierPath bezierPathWithRect:UIEdgeInsetsInsetRect(viewCheck.bounds, shadowInsets)];
 //    viewCheck.layer.shadowPath    = shadowPath.CGPath;
@@ -98,25 +101,55 @@
 }
 
 - (IBAction)shareAction:(id)sender {
-    MyManager *sharedManager = [MyManager sharedManager];
-    NSLog(@"%@", sharedManager.colors);
-    NSLog(@"%@", sharedManager.toggledButtons);
-    NSLog(@"%f", sharedManager.time);
-    PathsStorage *paths = [PathsStorage new];
-    NSLog(@"%lu", (unsigned long)[paths.planet count]);
+//    MyManager *sharedManager = [MyManager sharedManager];
+//    NSLog(@"%@", sharedManager.colors);
+//    NSLog(@"%@", sharedManager.toggledButtons);
+//    NSLog(@"%f", sharedManager.time);
+//    PathsStorage *paths = [PathsStorage new];
+//    NSLog(@"%lu", (unsigned long)[paths.planet count]);
+    UIImage* image = [self.animationView renderImage];
+        UIActivityViewController *share = [[UIActivityViewController alloc] initWithActivityItems:@[image, self] applicationActivities:nil];
+    share.popoverPresentationController.sourceView = self.view;
+    [self presentViewController:share animated:true completion:nil];
+        
+//
+//        activityVC = [activityVC initWithActivityItems:@[image, self] applicationActivities:nil];
+//
+//        activityVC.popoverPresentationController.sourceView = self.view;
+//
+//        [self presentViewController:activityVC animated:YES completion:nil];
 }
 - (IBAction)drawAction:(id)sender {
+    if (self.resetState == false) {
+    self.drawButton.enabled = false;
+    self.openPaletteButton.enabled = false;
+    self.openTimerButton.enabled = false;
+    self.shareButton.enabled = false;
     self.animationView.delegate = self;
     [self.animationView drawImage];
+    } else {
+        self.drawButton.enabled = false;
+        [self.animationView resetState];
+        [self.drawButton setTitle:@"Draw" forState:UIControlStateNormal];
+        self.resetState = false;
+    }
 }
 
 -(void)drawingComplete {
     NSLog(@"Drawing done");
+    [self.drawButton setTitle:@"Reset" forState:UIControlStateNormal];
+    self.drawButton.enabled = true;
+    self.shareButton.enabled = true;
+    self.resetState = true;
 }
 
 -(void)readyToDraw {
     self.drawButton.enabled = true;
+    self.openPaletteButton.enabled = true;
+    self.openTimerButton.enabled = true;
 }
+
+
 
 
 @end

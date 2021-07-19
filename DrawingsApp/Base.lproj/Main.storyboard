@@ -201,6 +201,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Drawings" id="1W7-Lv-62r"/>
+                    <connections>
+                        <outlet property="head" destination="3tZ-KU-9np" id="Ioh-Bt-oJC"/>
+                        <outlet property="landscape" destination="IOB-hG-cla" id="Nvl-8d-2T9"/>
+                        <outlet property="planet" destination="bX7-Bj-0zX" id="bIi-RT-Too"/>
+                        <outlet property="tree" destination="Gqa-t7-FxG" id="UZI-8O-kxG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eE-7Z-xWz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

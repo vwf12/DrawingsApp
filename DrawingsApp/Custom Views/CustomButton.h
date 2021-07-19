@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CustomButton : UIButton
-
+- (void)setHighlighted:(BOOL)highlighted;
 @end
 
 NS_ASSUME_NONNULL_END

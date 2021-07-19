@@ -100,6 +100,30 @@
 //    }
 }
 
+-(void)resetState {
+    
+//    NSEnumerator *enumerator = [self.layer.sublayers reverseObjectEnumerator];
+//    for(CALayer *layer in enumerator) {
+//        [layer removeFromSuperlayer];
+//    }
+    
+    for (CAShapeLayer *layer in self.layer.sublayers) {
+        while (layer.strokeEnd > 0.0) {
+            layer.strokeEnd -= 1.0/(60.0);
+        }
+    }
+    [self.delegate readyToDraw];
+    
+}
+
+-(UIImage *)renderImage {
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0);
+        [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return image;
+}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

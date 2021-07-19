@@ -12,6 +12,7 @@
 
 -(void)drawingComplete;
 @property (nonatomic) NSNumber *selectedPicture;
+-(void)readyToDraw;
 
 @end
 

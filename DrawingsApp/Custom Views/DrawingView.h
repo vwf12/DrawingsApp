@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (retain, nonatomic) NSMutableArray *layers;
 @property (retain, nonatomic) NSArray *selectedPath;
 -(void)drawImage;
+-(void)resetState;
+-(UIImage *)renderImage;
 
 @end
 

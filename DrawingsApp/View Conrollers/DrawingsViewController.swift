@@ -14,11 +14,39 @@ protocol SendDataProtocol {
 
 class DrawingsViewController: UIViewController {
 
+    @IBOutlet weak var planet: CustomButton!
+    @IBOutlet weak var head: CustomButton!
+    @IBOutlet weak var tree: CustomButton!
+    @IBOutlet weak var landscape: CustomButton!
+    
     @objc weak var delegate: ViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.titleTextAttributes = [ NSAttributedString.Key.font: UIFont(name: "Montserrat-Regular", size: 17)!]
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let buttons: [CustomButton] = [planet, tree, head, landscape]
+        for i in 0...3 {
+            buttons[i].setHighlighted(false)
+        }
+        let selectedButton = delegate.selectedPicture
+        
+        switch selectedButton {
+        case 1:
+            planet.setHighlighted(true)
+        case 2:
+            head.setHighlighted(true)
+        case 3:
+            tree.setHighlighted(true)
+        case 4:
+            landscape.setHighlighted(true)
+        default:
+            break
+        }
     }
     
     @IBAction func planetAction(_ sender: Any) {
