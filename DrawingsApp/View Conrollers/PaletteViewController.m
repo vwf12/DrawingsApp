@@ -49,6 +49,16 @@
     self.palette10.delegate = self;
     self.palette11.delegate = self;
     self.palette12.delegate = self;
+    
+    self.buttons = [NSMutableArray new];
+    [self.buttons addObjectsFromArray:@[self.palette1, self.palette2, self.palette3, self.palette4, self.palette5, self.palette6, self.palette7, self.palette8, self.palette9, self.palette10, self.palette11, self.palette12]];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+
+
+    
+
 }
 - (IBAction)saveAction:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];
@@ -56,8 +66,8 @@
 
 -(void)checkForUntoggle {
     MyManager *sharedManager = [MyManager sharedManager];
-    NSLog(@"%@", sharedManager.toggledButtons);
-    if (sharedManager.toggledButtons.count == 4) {
+    NSLog(@"Toggled buttons count: %lu", (unsigned long)sharedManager.toggledButtons.count);
+    if (sharedManager.toggledButtons.count >= 4) {
         NSString *buttonToUntoggle =  [sharedManager.toggledButtons objectAtIndex:0];
         NSLog(@"%@", buttonToUntoggle);
         [[NSNotificationCenter defaultCenter]

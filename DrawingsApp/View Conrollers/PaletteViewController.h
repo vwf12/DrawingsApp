@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PaletteViewController : UIViewController
 -(void)checkForUntoggle;
+@property (nonatomic) NSMutableArray *buttons;
 @end
 
 NS_ASSUME_NONNULL_END

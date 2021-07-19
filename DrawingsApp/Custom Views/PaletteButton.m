@@ -12,7 +12,16 @@
 @implementation PaletteButton
 
 - (void)awakeFromNib {
+    MyManager *sharedManager = [MyManager sharedManager];
     
+    for (NSString *buttonToToggle in [sharedManager toggledButtons]) {
+       
+            if (self.color == buttonToToggle) {
+                self.isToggled = true;
+                NSLog(@"Button: %@ is toggled", self.color);
+            }
+        }
+
     [super awakeFromNib];
     self.tag = [self.color intValue];
     [self addTarget:self action: @selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
@@ -22,13 +31,6 @@
             name:self.color
             object:nil];
     self.layer.cornerRadius = 10;
-//    self.layer.borderWidth = 1;
-//    [self.layer setBorderColor:[UIColor colorWithWhite:0.0f alpha:0.25f].CGColor];
-//    [self.layer setBorderWidth:1.5];
-//    [self.layer setBorderColor:[UIColor colorNamed:@"Little Boy Blue"].CGColor];
-//    self.layer.shadowRadius = 2;
-//    self.layer.shadowColor = [UIColor blackColor].CGColor;
-//    self.layer.shadowOpacity = 0.25f;
     self.layer.shadowRadius = 1;
     self.layer.backgroundColor = UIColor.whiteColor.CGColor;
     [self.layer setShadowOffset:CGSizeMake(0, 0)];
@@ -36,9 +38,12 @@
     [self.layer setShadowOpacity:0.25];
     CGRect insideColorView = CGRectMake(self.bounds.origin.x + 8, self.bounds.origin.y + 8, 24, 24);
     self.colorView = [[UIView alloc] initWithFrame:insideColorView];
-//    colorView.backgroundColor = UIColor.redColor;
     self.colorView.backgroundColor = [UIColor colorNamed:self.color];
     self.colorView.layer.cornerRadius = 6;
+    if (self.isToggled == true) {
+        self.colorView.frame = CGRectMake(self.bounds.origin.x + 2, self.bounds.origin.y + 2, self.bounds.size.width - 4, self.bounds.size.height - 4);
+        self.colorView.layer.cornerRadius = 8;
+    }
     [self.colorView setUserInteractionEnabled:true];
     UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(buttonClicked)];
     [self.colorView addGestureRecognizer:tapGestureRecognizer];
@@ -89,6 +94,7 @@
         
     } else {
         [sharedManager.toggledButtons removeObject:self.color];
+        [sharedManager.colors removeObject:self.color];
         self.colorView.frame = CGRectMake(self.bounds.origin.x + 8, self.bounds.origin.y + 8, 24, 24);
 //        self.colorView.layer.cornerRadius = 6;
         [self setNeedsDisplay];
@@ -96,11 +102,9 @@
 }
 
 -(void)timerFired {
-    NSLog(@"Timer fired");
-    NSLog(@"%@", self.superview.backgroundColor.CGColor);
-    NSLog(@"%@", [UIColor colorNamed:self.color].CGColor);
+
     if (self.superview.backgroundColor.CGColor == [UIColor colorNamed:self.color].CGColor) {
-        NSLog(@"Check true");
+
     self.layer.backgroundColor = UIColor.whiteColor.CGColor;
     self.superview.backgroundColor = [UIColor whiteColor];
     self.layer.shadowRadius = 1;

@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) UIView *colorView;
 - (void)timerFired;
 @property (nonatomic) PaletteViewController *delegate;
+-(void)buttonClicked;
 @end
 
 NS_ASSUME_NONNULL_END
