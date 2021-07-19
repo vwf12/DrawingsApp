@@ -58,7 +58,8 @@
 
     if ([[notification name] isEqualToString:self.color]) {
         NSLog (@"Successfully received the test notification!");
-        [self buttonClicked];
+//        [self buttonClicked];
+        [self untoggleButton];
     }
 }
 
@@ -99,6 +100,14 @@
 //        self.colorView.layer.cornerRadius = 6;
         [self setNeedsDisplay];
     }
+}
+
+-(void)untoggleButton {
+    MyManager *sharedManager = [MyManager sharedManager];
+    self.isToggled = false;
+    [sharedManager.toggledButtons removeObject:self.color];
+    [sharedManager.colors removeObject:self.color];
+    self.colorView.frame = CGRectMake(self.bounds.origin.x + 8, self.bounds.origin.y + 8, 24, 24);
 }
 
 -(void)timerFired {
