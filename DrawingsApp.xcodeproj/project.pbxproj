@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7447290D26A571AD00E6FA4B /* DrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7447290C26A571AD00E6FA4B /* DrawingView.m */; };
+		7447291026A5722E00E6FA4B /* PathsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7447290F26A5722E00E6FA4B /* PathsStorage.m */; };
 		749EF5D426A1FCB9009C02DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EF5D326A1FCB9009C02DD /* AppDelegate.m */; };
 		749EF5D726A1FCB9009C02DD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EF5D626A1FCB9009C02DD /* SceneDelegate.m */; };
 		749EF5DA26A1FCB9009C02DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EF5D926A1FCB9009C02DD /* ViewController.m */; };
@@ -14,9 +16,23 @@
 		749EF5DF26A1FCBD009C02DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749EF5DE26A1FCBD009C02DD /* Assets.xcassets */; };
 		749EF5E226A1FCBD009C02DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749EF5E026A1FCBD009C02DD /* LaunchScreen.storyboard */; };
 		749EF5E526A1FCBD009C02DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EF5E426A1FCBD009C02DD /* main.m */; };
+		74AC6B2A26A440F5006F115A /* PaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AC6B2926A440F5006F115A /* PaletteViewController.m */; };
+		74AC6B2E26A44B6F006F115A /* PresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AC6B2D26A44B6F006F115A /* PresentationController.m */; };
+		74AC6B3226A45A48006F115A /* PaletteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AC6B3126A45A48006F115A /* PaletteButton.m */; };
+		74AC6B3426A46743006F115A /* MyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AC6B3326A46743006F115A /* MyTimer.swift */; };
+		74AC6B3726A49983006F115A /* MyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AC6B3626A49983006F115A /* MyManager.m */; };
+		74AC6B3926A4B685006F115A /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AC6B3826A4B685006F115A /* TimerViewController.swift */; };
+		74E5717F26A337580088D3E3 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74E5717D26A335080088D3E3 /* Montserrat-Medium.ttf */; };
+		74E5718026A3375A0088D3E3 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74E5717E26A335080088D3E3 /* Montserrat-Regular.ttf */; };
+		74E5718326A3426E0088D3E3 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74E5718226A3426E0088D3E3 /* CustomButton.m */; };
+		74E5718626A357B00088D3E3 /* DrawingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E5718526A357B00088D3E3 /* DrawingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7447290B26A571AD00E6FA4B /* DrawingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingView.h; sourceTree = "<group>"; };
+		7447290C26A571AD00E6FA4B /* DrawingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawingView.m; sourceTree = "<group>"; };
+		7447290E26A5722E00E6FA4B /* PathsStorage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathsStorage.h; sourceTree = "<group>"; };
+		7447290F26A5722E00E6FA4B /* PathsStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathsStorage.m; sourceTree = "<group>"; };
 		749EF5CF26A1FCB9009C02DD /* DrawingsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawingsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		749EF5D226A1FCB9009C02DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		749EF5D326A1FCB9009C02DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +45,22 @@
 		749EF5E126A1FCBD009C02DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		749EF5E326A1FCBD009C02DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		749EF5E426A1FCBD009C02DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74AC6B2826A440F5006F115A /* PaletteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteViewController.h; sourceTree = "<group>"; };
+		74AC6B2926A440F5006F115A /* PaletteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteViewController.m; sourceTree = "<group>"; };
+		74AC6B2C26A44B6F006F115A /* PresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentationController.h; sourceTree = "<group>"; };
+		74AC6B2D26A44B6F006F115A /* PresentationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PresentationController.m; sourceTree = "<group>"; };
+		74AC6B3026A45A48006F115A /* PaletteButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteButton.h; sourceTree = "<group>"; };
+		74AC6B3126A45A48006F115A /* PaletteButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteButton.m; sourceTree = "<group>"; };
+		74AC6B3326A46743006F115A /* MyTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyTimer.swift; path = DrawingsApp/MyTimer.swift; sourceTree = SOURCE_ROOT; };
+		74AC6B3526A49983006F115A /* MyManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyManager.h; sourceTree = "<group>"; };
+		74AC6B3626A49983006F115A /* MyManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyManager.m; sourceTree = "<group>"; };
+		74AC6B3826A4B685006F115A /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		74E5717D26A335080088D3E3 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		74E5717E26A335080088D3E3 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		74E5718126A3426E0088D3E3 /* CustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		74E5718226A3426E0088D3E3 /* CustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		74E5718426A357AF0088D3E3 /* DrawingsApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrawingsApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		74E5718526A357B00088D3E3 /* DrawingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,19 +93,63 @@
 		749EF5D126A1FCB9009C02DD /* DrawingsApp */ = {
 			isa = PBXGroup;
 			children = (
+				74AC6B2F26A45A03006F115A /* Custom Views */,
+				74AC6B2B26A440FB006F115A /* View Conrollers */,
+				74E5717C26A334FD0088D3E3 /* Resources */,
 				749EF5D226A1FCB9009C02DD /* AppDelegate.h */,
 				749EF5D326A1FCB9009C02DD /* AppDelegate.m */,
 				749EF5D526A1FCB9009C02DD /* SceneDelegate.h */,
 				749EF5D626A1FCB9009C02DD /* SceneDelegate.m */,
-				749EF5D826A1FCB9009C02DD /* ViewController.h */,
-				749EF5D926A1FCB9009C02DD /* ViewController.m */,
 				749EF5DB26A1FCB9009C02DD /* Main.storyboard */,
 				749EF5DE26A1FCBD009C02DD /* Assets.xcassets */,
 				749EF5E026A1FCBD009C02DD /* LaunchScreen.storyboard */,
 				749EF5E326A1FCBD009C02DD /* Info.plist */,
 				749EF5E426A1FCBD009C02DD /* main.m */,
+				74E5718426A357AF0088D3E3 /* DrawingsApp-Bridging-Header.h */,
 			);
 			path = DrawingsApp;
+			sourceTree = "<group>";
+		};
+		74AC6B2B26A440FB006F115A /* View Conrollers */ = {
+			isa = PBXGroup;
+			children = (
+				74AC6B2826A440F5006F115A /* PaletteViewController.h */,
+				74AC6B2926A440F5006F115A /* PaletteViewController.m */,
+				749EF5D826A1FCB9009C02DD /* ViewController.h */,
+				749EF5D926A1FCB9009C02DD /* ViewController.m */,
+				74AC6B2C26A44B6F006F115A /* PresentationController.h */,
+				74AC6B2D26A44B6F006F115A /* PresentationController.m */,
+				74E5718526A357B00088D3E3 /* DrawingsViewController.swift */,
+				74AC6B3826A4B685006F115A /* TimerViewController.swift */,
+			);
+			path = "View Conrollers";
+			sourceTree = "<group>";
+		};
+		74AC6B2F26A45A03006F115A /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				74E5718126A3426E0088D3E3 /* CustomButton.h */,
+				74E5718226A3426E0088D3E3 /* CustomButton.m */,
+				74AC6B3026A45A48006F115A /* PaletteButton.h */,
+				74AC6B3126A45A48006F115A /* PaletteButton.m */,
+				74AC6B3326A46743006F115A /* MyTimer.swift */,
+				74AC6B3526A49983006F115A /* MyManager.h */,
+				74AC6B3626A49983006F115A /* MyManager.m */,
+				7447290B26A571AD00E6FA4B /* DrawingView.h */,
+				7447290C26A571AD00E6FA4B /* DrawingView.m */,
+				7447290E26A5722E00E6FA4B /* PathsStorage.h */,
+				7447290F26A5722E00E6FA4B /* PathsStorage.m */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		74E5717C26A334FD0088D3E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				74E5717D26A335080088D3E3 /* Montserrat-Medium.ttf */,
+				74E5717E26A335080088D3E3 /* Montserrat-Regular.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +182,7 @@
 				TargetAttributes = {
 					749EF5CE26A1FCB9009C02DD = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -132,7 +209,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74E5718026A3375A0088D3E3 /* Montserrat-Regular.ttf in Resources */,
 				749EF5E226A1FCBD009C02DD /* LaunchScreen.storyboard in Resources */,
+				74E5717F26A337580088D3E3 /* Montserrat-Medium.ttf in Resources */,
 				749EF5DF26A1FCBD009C02DD /* Assets.xcassets in Resources */,
 				749EF5DD26A1FCB9009C02DD /* Main.storyboard in Resources */,
 			);
@@ -145,7 +224,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74AC6B2A26A440F5006F115A /* PaletteViewController.m in Sources */,
+				74AC6B3726A49983006F115A /* MyManager.m in Sources */,
+				74AC6B3226A45A48006F115A /* PaletteButton.m in Sources */,
+				74E5718626A357B00088D3E3 /* DrawingsViewController.swift in Sources */,
+				7447291026A5722E00E6FA4B /* PathsStorage.m in Sources */,
+				7447290D26A571AD00E6FA4B /* DrawingView.m in Sources */,
+				74AC6B3926A4B685006F115A /* TimerViewController.swift in Sources */,
+				74AC6B3426A46743006F115A /* MyTimer.swift in Sources */,
+				74E5718326A3426E0088D3E3 /* CustomButton.m in Sources */,
 				749EF5DA26A1FCB9009C02DD /* ViewController.m in Sources */,
+				74AC6B2E26A44B6F006F115A /* PresentationController.m in Sources */,
 				749EF5D426A1FCB9009C02DD /* AppDelegate.m in Sources */,
 				749EF5E526A1FCBD009C02DD /* main.m in Sources */,
 				749EF5D726A1FCB9009C02DD /* SceneDelegate.m in Sources */,
@@ -225,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -278,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -291,15 +380,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5238FCNJHS;
 				INFOPLIST_FILE = DrawingsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vwf.DrawingsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DrawingsApp/DrawingsApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,15 +403,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5238FCNJHS;
 				INFOPLIST_FILE = DrawingsApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = vwf.DrawingsApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DrawingsApp/DrawingsApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
