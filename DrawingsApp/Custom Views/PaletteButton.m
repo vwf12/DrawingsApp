@@ -110,8 +110,23 @@
 }
 
 -(void)timerFired {
+    
+    const CGFloat *backgroundComponents = CGColorGetComponents(self.superview.backgroundColor.CGColor);
 
-    if (self.superview.backgroundColor.CGColor == [UIColor colorNamed:self.color].CGColor) {
+       CGFloat r = backgroundComponents[0];
+       CGFloat g = backgroundComponents[1];
+       CGFloat b = backgroundComponents[2];
+
+    const CGFloat *buttonComponents = CGColorGetComponents([UIColor colorNamed:self.color].CGColor);
+
+       CGFloat rb = buttonComponents[0];
+       CGFloat gb = buttonComponents[1];
+       CGFloat bb = buttonComponents[2];
+
+//    if (self.superview.backgroundColor.CGColor == [UIColor colorNamed:self.color].CGColor) {
+
+//    NSLog(@"Button color: %@", buttonColor);
+    if ((r == rb) && (g == gb) && (b = bb)) {
 
     self.layer.backgroundColor = UIColor.whiteColor.CGColor;
     self.superview.backgroundColor = [UIColor whiteColor];

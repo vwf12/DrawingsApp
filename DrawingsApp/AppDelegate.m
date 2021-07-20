@@ -16,7 +16,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+//    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationBar class], nil]
+//     setTitleTextAttributes:
+//     @{NSForegroundColorAttributeName:[UIColor colorNamed:@"Light Green Sea"],
+//       NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Regular" size:17.0]
+//       }
+//     forState:UIControlStateNormal];
+    
+    [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class]]]
      setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor colorNamed:@"Light Green Sea"],
        NSFontAttributeName:[UIFont fontWithName:@"Montserrat-Regular" size:17.0]
