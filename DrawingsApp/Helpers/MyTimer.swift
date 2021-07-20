@@ -27,6 +27,8 @@ class MyTimer: NSObject {
     }
 
     @objc func eventWith(timer: Timer!) {
+        timer.invalidate()
+        
         delegate!.timerFired()
 
     }
