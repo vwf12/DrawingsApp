@@ -97,7 +97,7 @@
 }
 
 -(void) selectedDrawing: (NSNumber*)drawing {
-    NSLog(@"%@", drawing);
+
 }
 
 - (IBAction)shareAction:(id)sender {
@@ -121,6 +121,7 @@
 }
 - (IBAction)drawAction:(id)sender {
     if (self.resetState == false) {
+    self.animationView.layer.sublayers = nil;
     self.drawButton.enabled = false;
     self.openPaletteButton.enabled = false;
     self.openTimerButton.enabled = false;
@@ -131,12 +132,13 @@
         self.drawButton.enabled = false;
         [self.animationView resetState];
         [self.drawButton setTitle:@"Draw" forState:UIControlStateNormal];
+        
         self.resetState = false;
     }
 }
 
 -(void)drawingComplete {
-    NSLog(@"Drawing done");
+
     [self.drawButton setTitle:@"Reset" forState:UIControlStateNormal];
     self.drawButton.enabled = true;
     self.shareButton.enabled = true;
@@ -144,6 +146,7 @@
 }
 
 -(void)readyToDraw {
+    
     self.drawButton.enabled = true;
     self.openPaletteButton.enabled = true;
     self.openTimerButton.enabled = true;

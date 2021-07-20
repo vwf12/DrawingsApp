@@ -16,6 +16,7 @@
 		749EF5DF26A1FCBD009C02DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 749EF5DE26A1FCBD009C02DD /* Assets.xcassets */; };
 		749EF5E226A1FCBD009C02DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749EF5E026A1FCBD009C02DD /* LaunchScreen.storyboard */; };
 		749EF5E526A1FCBD009C02DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 749EF5E426A1FCBD009C02DD /* main.m */; };
+		74A820CA26A74E9200CD0CD1 /* NSMutableArray+Shuffling.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A820C926A74E9200CD0CD1 /* NSMutableArray+Shuffling.m */; };
 		74AC6B2A26A440F5006F115A /* PaletteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AC6B2926A440F5006F115A /* PaletteViewController.m */; };
 		74AC6B2E26A44B6F006F115A /* PresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AC6B2D26A44B6F006F115A /* PresentationController.m */; };
 		74AC6B3226A45A48006F115A /* PaletteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 74AC6B3126A45A48006F115A /* PaletteButton.m */; };
@@ -45,6 +46,8 @@
 		749EF5E126A1FCBD009C02DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		749EF5E326A1FCBD009C02DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		749EF5E426A1FCBD009C02DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74A820C826A74E9200CD0CD1 /* NSMutableArray+Shuffling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffling.h"; sourceTree = "<group>"; };
+		74A820C926A74E9200CD0CD1 /* NSMutableArray+Shuffling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffling.m"; sourceTree = "<group>"; };
 		74AC6B2826A440F5006F115A /* PaletteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteViewController.h; sourceTree = "<group>"; };
 		74AC6B2926A440F5006F115A /* PaletteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteViewController.m; sourceTree = "<group>"; };
 		74AC6B2C26A44B6F006F115A /* PresentationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentationController.h; sourceTree = "<group>"; };
@@ -137,6 +140,8 @@
 				74AC6B3626A49983006F115A /* MyManager.m */,
 				7447290B26A571AD00E6FA4B /* DrawingView.h */,
 				7447290C26A571AD00E6FA4B /* DrawingView.m */,
+				74A820C826A74E9200CD0CD1 /* NSMutableArray+Shuffling.h */,
+				74A820C926A74E9200CD0CD1 /* NSMutableArray+Shuffling.m */,
 				7447290E26A5722E00E6FA4B /* PathsStorage.h */,
 				7447290F26A5722E00E6FA4B /* PathsStorage.m */,
 			);
@@ -227,6 +232,7 @@
 				74AC6B2A26A440F5006F115A /* PaletteViewController.m in Sources */,
 				74AC6B3726A49983006F115A /* MyManager.m in Sources */,
 				74AC6B3226A45A48006F115A /* PaletteButton.m in Sources */,
+				74A820CA26A74E9200CD0CD1 /* NSMutableArray+Shuffling.m in Sources */,
 				74E5718626A357B00088D3E3 /* DrawingsViewController.swift in Sources */,
 				7447291026A5722E00E6FA4B /* PathsStorage.m in Sources */,
 				7447290D26A571AD00E6FA4B /* DrawingView.m in Sources */,

@@ -18,14 +18,13 @@
        
             if (self.color == buttonToToggle) {
                 self.isToggled = true;
-                NSLog(@"Button: %@ is toggled", self.color);
+ 
             }
         }
 
     [super awakeFromNib];
     self.tag = [self.color intValue];
     [self addTarget:self action: @selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
-    NSString *tagString = self.color;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(receiveNotification:)
             name:self.color
@@ -57,7 +56,7 @@
 {
 
     if ([[notification name] isEqualToString:self.color]) {
-        NSLog (@"Successfully received the test notification!");
+
 //        [self buttonClicked];
         [self untoggleButton];
     }
@@ -66,7 +65,7 @@
 -(void)buttonClicked {
     MyManager *sharedManager = [MyManager sharedManager];
     self.isToggled ^= YES;
-    NSLog(self.isToggled ? @"Yes" : @"No");
+
     
     if (self.isToggled == true) {
         

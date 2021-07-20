@@ -66,10 +66,10 @@
 
 -(void)checkForUntoggle {
     MyManager *sharedManager = [MyManager sharedManager];
-    NSLog(@"Toggled buttons count: %lu", (unsigned long)sharedManager.toggledButtons.count);
+
     if (sharedManager.toggledButtons.count >= 4) {
         NSString *buttonToUntoggle =  [sharedManager.toggledButtons objectAtIndex:0];
-        NSLog(@"%@", buttonToUntoggle);
+
         [[NSNotificationCenter defaultCenter]
                 postNotificationName:buttonToUntoggle
                 object:self];

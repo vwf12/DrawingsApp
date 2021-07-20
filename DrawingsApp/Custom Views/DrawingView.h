@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void)drawImage;
 -(void)resetState;
 -(UIImage *)renderImage;
+-(int)getRandomNumberBetween:(int)from and:(int)to;
 
 @end
 

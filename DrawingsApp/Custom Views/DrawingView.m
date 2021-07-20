@@ -10,6 +10,7 @@
 #import "MyManager.h"
 #import "DrawingsApp-Swift.h"
 #import "ViewController.h"
+#import "NSMutableArray+Shuffling.h"
 
 @implementation DrawingView
 
@@ -38,12 +39,10 @@
     }
     
    
-    UIBezierPath *finalPath = [UIBezierPath new];
-//    self.drawingLayer = [[CAShapeLayer alloc] init];
-//    self.drawingLayer.strokeStart = 0.0;
-//    self.drawingLayer.strokeEnd = 1.0;
-//    self.drawingLayer.fillColor = [UIColor clearColor].CGColor;
-//    self.drawingLayer.strokeColor = [UIColor colorNamed:@"Chill Sky"].CGColor;
+
+
+    NSMutableArray *randomColors = [[sharedManager colors] mutableCopy];
+    [randomColors shuffle];
     int counter = 0;
     for (UIBezierPath *path in self.selectedPath) {
         if (counter == 3) {
@@ -52,9 +51,13 @@
         CAShapeLayer *layer = [[CAShapeLayer alloc]init];
         layer.strokeStart = 0.0;
         layer.strokeEnd = 0.0;
-        NSString *colorString = [[sharedManager colors] objectAtIndex:counter];
+        
+        
+        NSLog(@"%@", randomColors);
+        NSString *colorString = [randomColors objectAtIndex:counter];
         layer.fillColor = [UIColor clearColor].CGColor;
         layer.strokeColor = [UIColor colorNamed:colorString].CGColor;
+        NSLog(@"Layers color: %@", [UIColor colorNamed:colorString]);
         layer.path = path.CGPath;
         layer.lineCap = kCALineCapRound;
         layer.lineJoin = kCALineJoinRound;
@@ -73,11 +76,11 @@
 }
 
 -(void)updateDrawing {
-    NSLog(@"%lu", (unsigned long)self.layers.count);
+
     MyManager *sharedManager = [MyManager sharedManager];
     double timeMultiplier = [sharedManager time];
 //    self.drawingLayer.strokeEnd += 1.0/(60.0 * timeMultiplier);
-    int completedLayers = 0;
+
     for (CAShapeLayer *layer in self.layers) {
         
         layer.strokeEnd += 1.0/(60.0 * timeMultiplier);
@@ -112,17 +115,26 @@
             layer.strokeEnd -= 1.0/(60.0);
         }
     }
+
     [self.delegate readyToDraw];
     
 }
 
 -(UIImage *)renderImage {
-    UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, 0);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(300, 300), true, 0);
+//    [self setClipsToBounds:false];
+//    [self.layer setMasksToBounds:YES];
+    self.layer.cornerRadius = 0.0;
         [self.layer renderInContext:UIGraphicsGetCurrentContext()];
         UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
-        
+    self.layer.cornerRadius = 8.0;
         return image;
+}
+
+-(int)getRandomNumberBetween:(int)from and:(int)to {
+
+    return (int)from + arc4random() % (to-from+1);
 }
 /*
 // Only override drawRect: if you perform custom drawing.
