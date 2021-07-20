@@ -25,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet CustomButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *goToDrawings;
 @property (nonatomic) MyManager *sharedManager;
-@property (nonatomic) BOOL *resetState;
+@property (nonatomic) BOOL resetState;
 
 @end
 
